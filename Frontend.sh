@@ -8,4 +8,4 @@ cd /usr/share/ngnix/html
 unzip /temp/frontend.zip
 
 systemctl enable nginx
-systemctl start nginx
+systemctl restart nginx
