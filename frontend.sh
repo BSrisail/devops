@@ -4,7 +4,7 @@ dnf install nginx -y
 echo -e "\e[33m copy expense \e[0m"
 cp expense.conf /etc/nginx/default.d/expense.conf
 
-echo -e "\e[33m enable nginx \e[0m"
+echo -e "\e[35m enable nginx \e[0m"
 systemctl enable nginx
 echo -e "\e[34m start nginx \e[0m"
 systemctl start nginx
