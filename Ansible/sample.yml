@@ -1,7 +1,7 @@
 - name: tst
   hosts: all
   task:
-    name: pingtest
-    ansible:
-      builtin:
-        ping:
+    - name: pingtest
+      ansible:
+        builtin:
+          ping:
