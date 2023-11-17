@@ -5,7 +5,7 @@
     - name: install nginx
       ansible.builtin.dnf:
        name: nginx
-       state: latest
+       state: present
     - name: copy expense
       ansible.builtin.copy:
        src: expense.conf
@@ -14,7 +14,7 @@
       ansible.builtin.file:
         path: usr/share/ngnix/html
         state: absent
-    - name: remove default nginx files
+    - name: create nginx files
       ansible.builtin.file:
         path: usr/share/ngnix/html
         state: directory
