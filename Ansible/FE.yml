@@ -14,7 +14,7 @@
 
     - name: remove default nginx files
       ansible.builtin.file:
-        path: /usr/share/ngnix/html
+        path: /usr/share/nginx/html
         state: absent
 
     - name: create nginx files
