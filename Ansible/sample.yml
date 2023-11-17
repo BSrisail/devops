@@ -3,6 +3,6 @@
   vars:
     link: www.sample.com
   tasks:
-    - name:url
+    - name: url
       ansible.builtin.debug:
         msg: "{{link}}"
