@@ -1,5 +1,5 @@
 - name: demo on vars
-  hosts: all
+  hosts: localhost
   vars:
     link: www.sample.com
   tasks:
