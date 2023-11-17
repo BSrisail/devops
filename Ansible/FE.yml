@@ -1,0 +1,30 @@
+- name: FE-setup
+  hosts: all
+  -tasks:
+    - name: install nginx
+      ansible.builtin.dnf:
+       name: nginx
+       state: latest
+    - name: copy expense
+      ansible.builtin.copy:
+       src: expense.conf
+       dest: /etc/nginx/default.d/expense.conf
+    - name: remove default nginx files
+      ansible.builtin.file:
+        path: usr/share/ngnix/html
+        state: absent
+    - name: Download frontend.zip
+      get_url:
+        url: https://expense-artifacts.s3.amazonaws.com/frontend.zip
+        dest: /tmp/frontend.zip
+    - name: Extract frontend.zip
+      unarchive:
+              src: /tmp/frontend.zip
+              dest: /tmp/frontend
+              remote_src: yes
+    - name: start nginx
+      ansible.builtin.systemd:
+        name: nginx
+        state: started
+        enabled: true
+
