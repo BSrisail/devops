@@ -12,11 +12,11 @@
        dest: /etc/nginx/default.d/expense.conf
     - name: remove default nginx files
       ansible.builtin.file:
-        path: usr/share/ngnix/html
+        path: /usr/share/ngnix/html
         state: absent
     - name: create nginx files
       ansible.builtin.file:
-        path: usr/share/ngnix/html
+        path: /usr/share/ngnix/html
         state: directory
     - name: Download frontend.zip
       ansible.builtin.unarchive:
