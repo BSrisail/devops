@@ -1,6 +1,6 @@
-- name: FE-setup
+- name: FE setup
   hosts: all
-  -tasks:
+  tasks:
     - name: install nginx
       ansible.builtin.dnf:
        name: nginx
