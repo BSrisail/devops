@@ -1,5 +1,8 @@
-- name: tst
+- name: demo on vars
   hosts: all
+  vars:
+    link: www.sample.com
   tasks:
-    - name: pingtest
-      ansible.builtin.ping:
+    - name:url
+      ansible.builtin.debug:
+        msg: "{{link}}"
