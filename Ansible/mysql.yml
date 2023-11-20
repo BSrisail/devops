@@ -1,6 +1,6 @@
 - name : sql
   hosts: sql
-  becomes: yes
+  become: yes
   tasks:
     - name: disable default mysql
       ansible.builtin.shell: dnf module disable mysql -y
