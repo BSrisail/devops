@@ -42,7 +42,7 @@
       ansible.builtin.shell: mysql -h 172.31.41.56 -uroot -pExpenseApp@1 < /app/schema/backend.sql
     - name: backend
       ansible.builtin.systemd:
-        name: backend
+        name: backend.service
         state: restarted
         enabled: yes
         demon-reload: yes
