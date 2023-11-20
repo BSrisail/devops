@@ -5,7 +5,7 @@ dnf module disable mysql -y &>>log
 echo $?
 
 echo -e "\e[33m copy expense \e[0m"
-cp mysql.re /etc/yum.repos.d/mysql.repo &>>log
+cp mysql.repo /etc/yum.repos.d/mysql.repo &>>log
 if [ $? -eq 0 ]; then
   echo -e "\e[33m copydone \e[0m"
 else
