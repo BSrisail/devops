@@ -1,8 +1,6 @@
 line=$(sed -n '11p' txt)
-exit_code=$?
-
-if [ $exit_code -eq 0 ]; then
+if [ -n "$line" ]; then
     echo "The 11th line is: $line"
 else
-    echo "The file does not have an 11th line."
+    echo "The file does not have 11 lines."
 fi
