@@ -1,7 +1,7 @@
-variable "subname" {
+variable "num" {
   default = "10"
 }
 
-output "subname" {
-  value = "var.subname"
+output "sub" {
+  value = "var.num"
 }
