@@ -2,6 +2,6 @@ variable "subname" {
   default = "10"
 }
 
-output "name_num" {
+output "subname" {
   value = "var.subname"
 }
