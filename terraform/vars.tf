@@ -1,5 +1,5 @@
 variable "subname" {
-  default = 10
+  default = "10"
 }
 
 output "name_num" {
