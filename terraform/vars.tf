@@ -1,7 +1,7 @@
-variable "num" {
+variable "sample" {
   default = "10"
 }
 
 output "sub" {
-  value = "var.num"
+  value = "var.sample"
 }
