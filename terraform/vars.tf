@@ -2,6 +2,14 @@ variable "sample" {
   default = "10"
 }
 
-output "sub" {
-  value = "var.sample"
+variable "fruits" {
+  default = ["subu", "bqna", "aam"]
+}
+
+output "sample" {
+  value = var.sample
+}
+
+output "fruits" {
+  value = var.fruits[0]
 }
