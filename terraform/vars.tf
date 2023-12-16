@@ -13,3 +13,8 @@ output "sample" {
 output "fruits" {
   value = var.fruits[0]
 }
+
+variable "test" {}
+output "test" {
+  value = var.test
+}
