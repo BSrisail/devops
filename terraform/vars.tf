@@ -1,5 +1,7 @@
-variable "list" {
+variable "names" {
+  type        = list(string)
 }
-resource "null_resource" "list" {
-  count = length(var.list)
-}
+
+variable "existing_vpc_id" {}
+variable "existing_subnet_id" {}
+variable "existing_sg_id" {}
