@@ -18,3 +18,9 @@ variable "test" {}
 output "test" {
   value = var.test
 }
+
+variable "list" {
+}
+resource "null_resource" "list" {
+  count = length(var.list)
+}
