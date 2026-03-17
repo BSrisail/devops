@@ -9,5 +9,4 @@ resource "aws_instance" "c2_instance" {
   tags = {
     Name = var.names[count.index]
   }
-
 }
